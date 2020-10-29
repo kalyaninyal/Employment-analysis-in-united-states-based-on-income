@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>etlproject</string>
+			<key>host</key>
+			<string>localhost</string>
+			<key>name</key>
+			<string>localhost</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPSocketConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8mb4</string>
+			<key>contentFilterV2</key>
+			<dict>
+				<key>children</key>
+				<array/>
+				<key>filterClass</key>
+				<string>groupNode</string>
+				<key>isConjunction</key>
+				<true/>
+			</dict>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGoCwwXGBkaHiVVJG51bGzTDQ4PEBMWV05TLmtleXNaTlMu
+			b2JqZWN0c1YkY2xhc3OiERKAAoADohQVgASABYAHVHR5cGVUcm93
+			c18QHVNlbGVjdGlvbkRldGFpbFR5cGVOU0luZGV4U2V00hsPHB1c
+			TlNSYW5nZUNvdW50EACABtIfICEiWiRjbGFzc25hbWVYJGNsYXNz
+			ZXNaTlNJbmRleFNldKIjJFpOU0luZGV4U2V0WE5TT2JqZWN00h8g
+			JidcTlNEaWN0aW9uYXJ5oiYkAAgAEQAaACQAKQAyADcASQBMAFEA
+			UwBcAGIAaQBxAHwAgwCGAIgAigCNAI8AkQCTAJgAnQC9AMIAzwDR
+			ANMA2ADjAOwA9wD6AQUBDgETASAAAAAAAAACAQAAAAAAAAAoAAAA
+			AAAAAAAAAAAAAAABIw==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {695, 481}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>create table counties (
+   State varchar(2) NOT NULL,
+  County varchar(100) NOT NULL,
+  Population int(15),
+  MedianHouseHoldIncome double,
+  UnemploymentRate float,
+  DiversityIndex float,
+  White double,
+  Black double,
+  Hispanic double,
+  Asian double,
+  AmericanIndian double,
+  NativeHawaiian double,
+  TwoOrMore double,
+   PRIMARY KEY (State, County))</string>
+			<key>table</key>
+			<string>counties</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>214</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>create table counties (
+   State varchar(2) NOT NULL,
+  County varchar(100) NOT NULL,
+  Population int(15),
+  MedianHouseHoldIncome double,
+  UnemploymentRate float,
+  DiversityIndex float,
+  White double,
+  Black double,
+  Hispanic double,
+  Asian double,
+  AmericanIndian double,
+  NativeHawaiian double,
+  TwoOrMore double,
+   PRIMARY KEY (State, County))</string>
+		<string>use etlproject</string>
+		<string>create database etlproject</string>
+		<string>create database etlusaproject</string>
+		<string>create database etlusaproject;
+use etlusaproject;
+create table counties (
+   State varchar(2) NOT NULL,
+  County varchar(100) NOT NULL,
+  Population int(15),
+  MedianHouseHoldIncome double,
+  UnemploymentRate float,
+  DiversityIndex float,
+  White double,
+  Black double,
+  Hispanic double,
+  Asian double,
+  AmericanIndian double,
+  NativeHawaiian double,
+  TwoOrMore double,
+   PRIMARY KEY (State, County))</string>
+		<string>use etlusaproject</string>
+		<string>alter table fact add constraint fkfromdate foreign key(dateId) references date(dateid)</string>
+		<string>alter table fact add constraint fk from transaction foreign key(transactionId) references transaction(transactionid)</string>
+		<string>alter table fact add constraint fkfromtransaction foreign key(transactionId) references transaction(transactionid)</string>
+		<string>alter table fact add constraint fkfromcustomer foreign key(customerId) references customer(customerid)</string>
+		<string>alter table fact add constraint fkfromcustomer foreign key(customerId) references product(customerid)</string>
+		<string>alter table fact add constraint fkfromproduct foreign key(customerId) references product(customerid)</string>
+		<string>alter table fact add constraint fkfromproduct foreign key(productId) references product(productid)</string>
+		<string>alter table fact add column dateId varchar(256)</string>
+		<string>alter table fact add column transactionId varchar(256)</string>
+		<string>alter table fact add column customerId varchar(256)</string>
+		<string>create table fact
+    (SRNO int not null auto_increment,
+     sales float(7,2) not null,
+     profit float(7,2) not null,
+    primary key(SRNO))</string>
+		<string>alter table fact add constraint fkfromdate foreign key(dateId) references customer(dateid)</string>
+		<string>alter table fact add dateid varchar(30)</string>
+		<string>alter table fact add column dateid</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>8.0.21</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
