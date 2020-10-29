@@ -1,7 +1,5 @@
 # Employment-analysis-in-united-states-based-on-income
-Employment analysis in united states based on income 
-
-
+Employment analysis in united states based on income in this project ETL is performed .
 
 Extraction
 
@@ -17,9 +15,18 @@ The  first steps in cleaning up the datasets involved figuring out which variabl
 
 After cleaning the datasets and workable, the data were merged . To start, the Unemployment dataset and Median Income dataset were merged on State and County, using an inner join. The Diversity dataset was then merged on that by State and County again, using an inner join as well. With all the three datasets combined  into one universal table, the State and County index was reset turning them back into columns, and columns were reordered to a more logical format.
 
-
-
 Load
 
 The last step was to transfer the  final output into a DataBase.  created a database and respective tables to match the columns from the final Panda’s Data Frame using MYSQL and then connected to the database using SQLAlchemy and loaded the result. By this we were  able to perform multiple queries to suit a desired criterion. 
  
+output:
+The final output will help us to recognize which county, state that has the following. 
+
+•	Most or Least Population. 
+•	Median Household Income
+•	Unemployment Rate
+•	Diversity Index
+•	Race Index 
+
+These indices can be used to identify if any development aid/work are required for areas with high unemployment rate, low median income or with high population. 
+If the population is high and if the schools/colleges/educational institutions are less, these indices can be used to build more educational institutions, which in turn create more employment opportunities. It is a cascading effect of more the population, more educational institutions, more employment, more household income.
